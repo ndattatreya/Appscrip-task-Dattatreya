@@ -16,7 +16,10 @@ export default function Header() {
       </nav>
 
       <div className={styles.right}>
-        <span className={styles.icon}>🔍</span>
+        <div className={styles.searchContainer}>
+          <input type="text" placeholder="Search..." className={styles.searchInput} />
+          <span className={styles.icon}>🔍</span>
+        </div>
         <span className={styles.icon}>♡</span>
         <span className={styles.icon}>🛒</span>
         <span className={styles.icon}>👤</span>

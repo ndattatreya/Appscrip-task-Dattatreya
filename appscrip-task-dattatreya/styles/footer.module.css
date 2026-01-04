@@ -87,6 +87,25 @@
   color: #ccc;
 }
 
+.section {
+  /* for mobile */
+}
+
+.dropdownHeader {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.links {
+  display: block;
+}
+
 .socials img {
   width: 28px;
   margin-right: 12px;
@@ -117,24 +136,52 @@
 /* MOBILE */
 @media (max-width: 768px) {
   .footer {
-    padding: 24px 16px;
+    padding: 20px 12px;
   }
 
   .top {
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
 
   .bottom {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .dropdownHeader {
+    margin-bottom: 8px;
+  }
+
+  .links {
+    display: none;
+    margin-top: 8px;
+  }
+
+  .open {
+    display: block;
   }
 
   .subscribe input {
-    width: 200px;
+    width: 150px;
   }
 
   .note {
     display: none;
+  }
+
+  .bottom h5 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .bottom p {
+    font-size: 11px;
+    margin: 4px 0;
+  }
+
+  .copy {
+    font-size: 10px;
+    margin-top: 20px;
   }
 }

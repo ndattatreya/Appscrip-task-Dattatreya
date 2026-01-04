@@ -23,6 +23,20 @@
   gap: 20px;
 }
 
+.sortContainer {
+  grid-column: 1 / -1;
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+.sortSelect {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+}
+
 /* Mobile and Tablet */
 @media (max-width: 1024px) {
   .grid {

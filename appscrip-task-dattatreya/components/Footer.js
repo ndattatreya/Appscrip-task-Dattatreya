@@ -1,6 +1,13 @@
 import styles from "../styles/footer.module.css";
+import { useState } from "react";
 
 export default function Footer() {
+  const [openSections, setOpenSections] = useState({});
+
+  const toggleSection = (section) => {
+    setOpenSections(prev => ({ ...prev, [section]: !prev[section] }));
+  };
+
   return (
     <footer className={styles.footer}>
       {/* TOP */}
@@ -37,42 +44,60 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className={styles.bottom}>
-        <div>
-          <h5>mettā muse</h5>
-          <p>About Us</p>
-          <p>Stories</p>
-          <p>Artisans</p>
-          <p>Boutiques</p>
-          <p>Contact Us</p>
-          <p>EU Compliances Docs</p>
-        </div>
-
-        <div>
-          <h5>QUICK LINKS</h5>
-          <p>Orders & Shipping</p>
-          <p>Join/Login as a Seller</p>
-          <p>Payment & Pricing</p>
-          <p>Return & Refunds</p>
-          <p>FAQs</p>
-          <p>Privacy Policy</p>
-          <p>Terms & Conditions</p>
-        </div>
-
-        <div>
-          <h5>FOLLOW US</h5>
-          <div className={styles.socials}>
-            <img src="/images/Insta.png" alt="Instagram" />
-            <img src="/images/linkedin.png" alt="LinkedIn" />
+        <div className={styles.section}>
+          <h5 onClick={() => toggleSection('about')} className={styles.dropdownHeader}>
+            mettā muse <span className={styles.arrow}>{openSections.about ? '▲' : '▼'}</span>
+          </h5>
+          <div className={`${styles.links} ${openSections.about ? styles.open : ''}`}>
+            <p>About Us</p>
+            <p>Stories</p>
+            <p>Artisans</p>
+            <p>Boutiques</p>
+            <p>Contact Us</p>
+            <p>EU Compliances Docs</p>
           </div>
+        </div>
 
-          <h5 className={styles.accepts}>mettā muse ACCEPTS</h5>
-          <div className={styles.payments}>
-            <img src="/images/g-pay.png" alt="Google Pay" />
-            <img src="/images/mastercard.png" alt="Mastercard" />
-            <img src="/images/paypal.png" alt="PayPal" />
-            <img src="/images/amex.png" alt="American Express" />
-            <img src="/images/a-pay.png" alt="Apple Pay" />
-            <img src="/images/d-pay.png" alt="Diners Club" />
+        <div className={styles.section}>
+          <h5 onClick={() => toggleSection('links')} className={styles.dropdownHeader}>
+            QUICK LINKS <span className={styles.arrow}>{openSections.links ? '▲' : '▼'}</span>
+          </h5>
+          <div className={`${styles.links} ${openSections.links ? styles.open : ''}`}>
+            <p>Orders & Shipping</p>
+            <p>Join/Login as a Seller</p>
+            <p>Payment & Pricing</p>
+            <p>Return & Refunds</p>
+            <p>FAQs</p>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+          </div>
+        </div>
+
+        <div className={styles.section}>
+          <h5 onClick={() => toggleSection('follow')} className={styles.dropdownHeader}>
+            FOLLOW US <span className={styles.arrow}>{openSections.follow ? '▲' : '▼'}</span>
+          </h5>
+          <div className={`${styles.links} ${openSections.follow ? styles.open : ''}`}>
+            <div className={styles.socials}>
+              <img src="/images/Insta.png" alt="Instagram" />
+              <img src="/images/linkedin.png" alt="LinkedIn" />
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.section}>
+          <h5 onClick={() => toggleSection('accepts')} className={styles.dropdownHeader}>
+            mettā muse ACCEPTS <span className={styles.arrow}>{openSections.accepts ? '▲' : '▼'}</span>
+          </h5>
+          <div className={`${styles.links} ${openSections.accepts ? styles.open : ''}`}>
+            <div className={styles.payments}>
+              <img src="/images/g-pay.png" alt="Google Pay" />
+              <img src="/images/mastercard.png" alt="Mastercard" />
+              <img src="/images/paypal.png" alt="PayPal" />
+              <img src="/images/amex.png" alt="American Express" />
+              <img src="/images/a-pay.png" alt="Apple Pay" />
+              <img src="/images/d-pay.png" alt="Diners Club" />
+            </div>
           </div>
         </div>
       </div>

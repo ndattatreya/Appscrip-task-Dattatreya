@@ -24,7 +24,23 @@
 
 .group h5 {
   font-size: 13px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.checkboxLabel input {
+  margin-right: 8px;
+}
+
+.checkboxLabel span {
+  color: #333;
 }
 
 /* Mobile */
