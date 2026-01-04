@@ -5,22 +5,14 @@ import ProductCard from "../components/ProductCard";
 import styles from "../styles/plp.module.css";
 import { useState, useMemo } from "react";
 
-export async function getServerSideProps() {
-  const res = await fetch("https://fakestoreapi.com/products", {
-    headers: {
-      "User-Agent": "Mozilla/5.0",
-      "Accept": "application/json",
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
+export async function getStaticProps() {
+  const res = await fetch("https://fakestoreapi.com/products");
 
   const products = await res.json();
 
   return {
     props: { products },
+    revalidate: 3600, // optional (ISR)
   };
 }
 
