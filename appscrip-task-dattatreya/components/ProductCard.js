@@ -4,7 +4,7 @@ export default function ProductCard({ product }) {
   return (
     <article className={styles.card}>
       <img
-        src={product.image}
+        src={product.thumbnail}
         alt={product.title}
         className={styles.image}
         loading="lazy"
