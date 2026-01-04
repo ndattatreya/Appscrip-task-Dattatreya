@@ -5,7 +5,7 @@ import ProductCard from "../components/ProductCard";
 import styles from "../styles/plp.module.css";
 import { useState, useMemo } from "react";
 
-export async function getStaticProps() {
+/*export async function getStaticProps() {
     const res = await fetch("https://fakestoreapi.com/products");
 
     const text = await res.text();
@@ -21,7 +21,20 @@ export async function getStaticProps() {
         props: { products },
         revalidate: 3600,
     };
+}*/
+
+export async function getStaticProps() {
+  const res = await fetch("https://dummyjson.com/products?limit=100");
+  const data = await res.json();
+
+  return {
+    props: {
+      products: data.products, // IMPORTANT
+    },
+    revalidate: 3600,
+  };
 }
+
 
 export default function Home({ products: initialProducts }) {
     const [categoryFilter, setCategoryFilter] = useState('');
