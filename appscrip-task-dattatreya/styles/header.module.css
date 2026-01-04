@@ -53,3 +53,22 @@
   cursor: pointer;
   font-weight: 500;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .right {
+    gap: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+}

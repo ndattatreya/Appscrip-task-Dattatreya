@@ -2,6 +2,7 @@
   border: 1px solid #eee;
   padding: 16px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .image {
@@ -17,4 +18,19 @@
 
 .price {
   font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card {
+    padding: 4px;
+  }
+
+  .image {
+    height: 80px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
 }

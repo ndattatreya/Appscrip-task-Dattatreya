@@ -116,11 +116,25 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .footer {
+    padding: 24px 16px;
+  }
+
   .top {
     flex-direction: column;
+    gap: 24px;
   }
 
   .bottom {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .subscribe input {
+    width: 200px;
+  }
+
+  .note {
+    display: none;
   }
 }

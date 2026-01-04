@@ -23,13 +23,27 @@
   gap: 20px;
 }
 
-/* Mobile */
+/* Mobile and Tablet */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
   .content {
     flex-direction: column;
   }
 
   .filters {
-    display: none;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 16px;
   }
 }

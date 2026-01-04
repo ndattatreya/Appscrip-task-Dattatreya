@@ -1,9 +1,10 @@
+'use client';
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Filters from "../components/Filters";
 import ProductCard from "../components/ProductCard";
 import styles from "../styles/plp.module.css";
-
 
 export async function getServerSideProps() {
     const res = await fetch("https://fakestoreapi.com/products");

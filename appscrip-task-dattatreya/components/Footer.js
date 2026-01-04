@@ -22,7 +22,7 @@ export default function Footer() {
 
           <h4 className={styles.currencyTitle}>CURRENCY</h4>
           <div className={styles.currency}>
-            <img src="/images/us-flag.png" alt="USD currency" />
+            <img src="/images/usFLAG.png" alt="USD currency" />
             <span>USD</span>
           </div>
 
