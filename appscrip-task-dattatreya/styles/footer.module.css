@@ -1,0 +1,126 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 48px 64px;
+  font-family: Arial, sans-serif;
+}
+
+/* TOP */
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.top h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.top p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.subscribe {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.subscribe input {
+  width: 260px;
+  padding: 12px;
+  border: none;
+}
+
+.subscribe button {
+  padding: 12px 20px;
+  background: transparent;
+  color: #777;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+
+.currencyTitle {
+  margin-top: 20px;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.currency img {
+  width: 20px;
+}
+
+.note {
+  font-size: 11px;
+  margin-top: 8px;
+  color: #999;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 40px 0;
+}
+
+/* BOTTOM */
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.bottom h5 {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.bottom p {
+  font-size: 13px;
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.socials img {
+  width: 28px;
+  margin-right: 12px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.accepts {
+  margin-top: 24px;
+}
+
+.payments img {
+  height: 28px;
+  margin: 6px 8px 0 0;
+  background: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.copy {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+}

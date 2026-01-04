@@ -1,0 +1,14 @@
+.filters {
+  width: 220px;
+  border-right: 1px solid #eee;
+  padding-right: 16px;
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.group h5 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}

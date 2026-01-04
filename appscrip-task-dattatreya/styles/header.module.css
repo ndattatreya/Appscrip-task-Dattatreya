@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.left {
+  flex: 1;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex: 2;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.lang {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+}
