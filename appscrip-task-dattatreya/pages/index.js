@@ -8,11 +8,18 @@ import { useState, useMemo } from "react";
 export async function getStaticProps() {
   const res = await fetch("https://fakestoreapi.com/products");
 
-  const products = await res.json();
+  const text = await res.text();
+
+  let products = [];
+  try {
+    products = JSON.parse(text);
+  } catch (err) {
+    console.error("FakeStore returned non-JSON:", text.slice(0, 200));
+  }
 
   return {
     props: { products },
-    revalidate: 3600, // optional (ISR)
+    revalidate: 3600,
   };
 }
 
