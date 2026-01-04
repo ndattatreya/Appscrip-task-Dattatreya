@@ -6,12 +6,22 @@ import styles from "../styles/plp.module.css";
 import { useState, useMemo } from "react";
 
 export async function getServerSideProps() {
-    const res = await fetch("https://fakestoreapi.com/products");
-    const products = await res.json();
+  const res = await fetch("https://fakestoreapi.com/products", {
+    headers: {
+      "User-Agent": "Mozilla/5.0",
+      "Accept": "application/json",
+    },
+  });
 
-    return {
-        props: { products },
-    };
+  if (!res.ok) {
+    throw new Error("Failed to fetch products");
+  }
+
+  const products = await res.json();
+
+  return {
+    props: { products },
+  };
 }
 
 export default function Home({ products: initialProducts }) {
